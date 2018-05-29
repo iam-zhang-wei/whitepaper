@@ -29,6 +29,8 @@ Having a separated blockchain for each smart contract has advantages:
 
 The blocks in the main chain will have references to the newest blocks created in the side chains. That means that the side chains are going to be secure through the main chain, simplifying things for consensus (which is happening only in the main chain).
 
+![Blockchains](https://github.com/iam-zhang-wei/whitepaper/raw/master/graph-chains.png)
+
 In the graphic we can see how the main chain consensus also secures all the sub chains. Because the blocks in the main chains are read only, a reference to newer blocks in the subchains are also read only.
 
 ### Free transactions
