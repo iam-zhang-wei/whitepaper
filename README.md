@@ -50,14 +50,3 @@ Thus, the interaction with the smart contracts are not free, the gas required to
 It's a battle tested, mature project with a great community behind. I'm also happened to be a Golang/C developer myself.
 
 I think Solidity is an OK language with an execution environment and I see there are many talented developers already.
-
-## Donations
-
-This is a part-time project right now, I need some donations in order to pause other work, so I can focus full time and work on Andromeda.
-
-Every donation will be paid back with Perseus once the main net is launched. Do not send donations from exchanges or wallets where you don't own the private key.
-
-This native currency will be minable, just like Ethereum, it will be premined to pay back the donations, the developer(s) behind the project won't have any Perseus unless they buy or mine it.
-
-* Ethereum: 0xEb6235CCF2C52774af4C0fb3861b6c84f45d4EB8
-* Bitcoin: 1zhangfnD6GZF5K5mzZ5Nt7mmXHBNzsCT
