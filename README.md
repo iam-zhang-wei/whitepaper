@@ -1,52 +1,73 @@
 Andromeda Project
-================
+=================
 
 [Zhang Wei](mailto:iam_zhang_wei@protonmail.com)
 
-## What is Andromeda
 
-Andromeda is a next generation platform for the development and distribution of applications on a blockchain. Andromeda has two layers, the economic layer, where the native currency (Perseus) lives, and an execution layer, where each smart contract has their own separated and independent blockchain.
+## Introduction
 
-## Why?
+Cryptocurrency and smart contracts are changing the world economy. From a currency perspective, what was previously impossible in most of the world – transferring money globally in an instant – is now not only possible, it’s safe, fast, easy and almost frictionless.
 
-Andromeda has an ambitious goal, to make blockchain technology truly mainstream. In order to achieve that goal Andromeda allows _free_ interactions in the execution layer. The currency _Perseus_ is needed to create smart contracts but every interaction/function call is performed without the need of paying a _fee_ in the _Perseus_ currency, thus allowing developers to create applications that utilizes their blockchain as an append-only database for their applications, without requiring their users/customers to own or spend any _Perseus_.
+We want to create a cryptocurrency that is useful for all people for day-to-day usage. A system that can allow non-technical users to be easily be a part of the new digital money world. Our goal and principle is to keep things simple and easy with value for everybody.
 
-## How?
+### Goals
 
-Andromeda forked off the Ethereum go codebase, with two fundamental changes:
+* Create a brand new blockchain with smart contract capabilities
+* The blockchain aims mass adoption by allowing free transactions with smart contracts.
+* The network supports Masternodes to make things faster to process.
 
-1. Each smart contract will start their own blockchain.
-2. Each function call to a smart contract will be 'free'.
+### Executive Summary
 
-### Why having many blockchains?
+Andromeda is a standalone blockchain with smart contract support. It's built upon an improved Etherereum codebase which improves capacity and introduces _free_ smart contracts interactions. Users in the Andromeda network does not need ownership of the native coin (Perseus) in order to interact with existing smart contracts, making smart contract open and free for anyone to interact.
 
-Having a separated blockchain for each smart contract has advantages:
+In order to improve speed Andromeda will have masternodes. A masternode is a primary node in the network that will not only relay transactions (making it safe to trust unconfirmed transactions).
 
-1. The main chain is smaller.
-2. Each blockchain is well scoped
-    1. Calculate the global state of smart contract is simpler and faster.z
-    2. Busy/popular smart contracts will have longer chains, while the main chain growth at a predictable pace.
+Hosting a masternode will generate additional Perseus for its owner. The amount of Perseus to receive will vary due the current number of masternodes online on the network and their daily uptime.
 
-The blocks in the main chain will have references to the newest blocks created in the side chains. That means that the side chains are going to be secure through the main chain, simplifying things for consensus (which is happening only in the main chain).
+Anybody can run a masternode! The pre-requisites are:
+ * 10,000 Perseus
+ * Static Public IP Address
 
-![Blockchains](https://github.com/iam-zhang-wei/whitepaper/raw/master/graph-chains.png)
+The pre-requisites may change in the future when the community voting system (a dApp) is finished and implemented. After the voting system is implemented, the number of Perseus needed as collateral to run a masternode will be decided by the community. The voting mechanism is intended to be added so that anyone with at least 1 Perseus can vote.
+    
+### Specification
 
-In the graphic we can see how the main chain consensus also secures all the sub chains. Because the blocks in the main chains are read only, a reference to newer blocks in the subchains are also read only.
+ * Algorithm: Ethash
+ * Time between blocks: 13 sec
+ * Total block reward: 12 Perseus
+ * Miner reward: 10 Perseus / Block (plus all the transaction fees)
+ * Masternode reward: 2 Perseus/ Block
 
-### Free transactions
+## Implementation
 
-#### Preventing spam
+Andromeda is based on the Ethereum codebase with masternodes and the ability to interact _freely_ with smart contracts.
 
-Because interaction with smart contracts are free of charge, there should be a mechanism in place to prevent spamming the network. To prevent spam the client must perform a tiny proof of work calculation that must be included in the transaction. The PoW difficulty will be translated as gas by the miners.
+### What is _free_?
 
-#### How to incentive miners?
+Any interaction with smart contract costs 0 Perseus and does not requires that the address owns any Perseus, thus, giving the freedom to anyone to interact with smartcontract with the ultimate goal of making blockchain and decentralized application truly mainstream.
 
-Miners should be economically incentive to process the _free_ transactions the same way do process transactions that pays a _fee_ (all transactions in the economic layers must pay a _fee_). In order to archive that, the miners can redeem the proof of work included in the free transactions. Think of it like the proof-of-work performed by the clients are coupons that the miners can redeem and for native currency that will be included in the block rewards (like a regular *fee*).
+It will be possible to create ERC-20 tokens in the Andromeda network and addresses and the token holders won't need to own any Perseus to pay for the 'gas'.
 
-Thus, the interaction with the smart contracts are not free, the gas required to execute the smart contract is paid as proof of work.
+### What is not free?
 
-### Why Ethereum?
+Any activity in the economic layer requires a fee that is paid in Perseus. Moving funds (Perseus) from one address to another and creating a smart contract in the network also pays a fee in Perseus.
 
-It's a battle tested, mature project with a great community behind. I'm also happened to be a Golang/C developer myself.
+### Preventing spam
 
-I think Solidity is an OK language with an execution environment and I see there are many talented developers already.
+Interacting with a smart contract is not necessarily     free, to avoid spam attacks a Andromeda has a throttle mechanism in place. Each transaction with a smart contract must include a tiny Proof-of-Work. A proof of work is a piece of data which is difficult (costly, time-consuming) to produce but easy for others to verify and which satisfies certain requirements. Producing a proof of work can be a random process with low probability so that a lot of trial and error is required on average before a valid proof of work is generated.
+
+The proof-of-work required to interact with smart contract in the Andromeda network would take a modern CPU 10 to 20 seconds to calculate.
+
+Alternately the user may decide to pay the 'gas' price in Perseus to avoid performing the PoW.
+
+### Incentivizing miners to process _free_ transactions
+
+Miners must be economically incentive to process the _free_ transactions the same way do process transactions that pays a _fee_. In order to archive that, the miners can redeem the proof of work included in the free transactions and convert them in Perseus. The more _free_ transaction miners includes in a block, higher the block reward they take.
+
+
+## Roadmap
+
+ * Q4 2018: Test-network launch
+   This testing blockchain will be used for testing mining, wallets and tuning the PoW algorithms (For the _Free_ transactions).
+ * Q1 2019: Main-net launch.
+ * Q2 2019: Launch the voting dApp to let everyone decide the future of Andromeda.
