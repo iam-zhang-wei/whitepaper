@@ -64,6 +64,13 @@ Alternately the user may decide to pay the 'gas' price in Perseus to avoid perfo
 
 Miners must be economically incentive to process the _free_ transactions the same way do process transactions that pays a _fee_. In order to archive that, the miners can redeem the proof of work included in the free transactions and convert them in Perseus. The more _free_ transaction miners includes in a block, higher the block reward they take.
 
+## ICO
+
+An ICO is performed in order to fund the development of the project. When the main network launches the ERC20 tokens will be swap 1 to 1 with the native currency (Perseus) in the Andromeda network.
+
+### How to participate in the ICO?
+
+Send Ethereum to the Crowd Sale Smart contract **0xc9f0117c885c59aa03907174222f1b19f3aee90d**. The Crowd Sale will run for 60 days since its creation, and the amount of PRX (Perseus Token, to be swap when the main network launches) at 5,000PRX per Ethereum and decreasing until 1,000PRX per ETH in the last day.
 
 ## Roadmap
 
